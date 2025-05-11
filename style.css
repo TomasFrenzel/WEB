@@ -1,0 +1,332 @@
+:root {
+    --color-bg: #f7f7ff;
+    --color-primary: #ff9301;
+    --color-secondary: #f3f4f6;
+    --color-accent: #38bdf8;
+    --color-text: #555555;
+    --color-muted: #9ca3af;
+  
+    --font-family-base: 'roboco';}
+  body {
+    margin: 0;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+  
+  .hero {
+    background-color: var(--color-bg);
+    padding-block: var(--spacing-xl);
+  }
+  
+  .hero__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+  }
+  
+  .hero__content {
+    flex: 1;
+  }
+  
+  .hero__intro {
+    color: var(--color-accent);
+    font-size: 1.1rem;
+  }
+  
+  .hero__name {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    color: var(--color-primary);
+    margin: var(--spacing-xs) 0;
+  }
+  
+  .hero__title {
+    font-size: var(--font-size-lg);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .hero__description {
+    color: var(--color-muted);
+    max-width: 500px;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .nav__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+  
+  .nav__item {}
+  
+  .nav__link {
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .nav__link:hover {
+    background-color: var(--color-accent);
+  }
+  
+  .hero__image-wrapper {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .hero__image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+  }
+  
+  .hero__caption {
+    margin-top: var(--spacing-xs);
+    font-size: 0.875rem;
+    color: var(--color-muted);
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--space-fluid);
+  }
+  
+  /* === TYPOGRAFIE === */
+  .heading {
+    font-weight: 900;
+    color: var(--color-heading);
+  }
+  
+  .heading--main {
+    font-size: var(--font-size-heading-main);
+  }
+  
+  .heading--sub {
+    font-size: var(--font-size-heading-sub);
+    color: var(--color-primary);
+  }
+  
+  .text--small {
+    font-size: var(--font-size-small);
+  }
+  
+  /* === HLAVIČKA === */
+  .header {
+    background-color: rgba(255, 147, 1, 0.5);
+    padding: var(--space-2x) 0;
+  }
+  
+  .header__title {
+    font-size: var(--font-size-heading-main);
+    font-weight: 900;
+    color: var(--color-heading);
+  }
+  
+  .header__subtitle {
+    font-size: var(--font-size-heading-sub);
+    color: var(--color-primary);
+  }
+  
+  /* === NAVIGACE === */
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1x);
+    height: var(--menu-height);
+    padding: 0 var(--space-fluid);
+  }
+  
+  .nav__item {
+    position: relative;
+    font-weight: 900;
+    color: var(--color-heading);
+    padding: 0.5em 1em;
+    cursor: pointer;
+  }
+  
+  .nav__item--active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--menu-underline-height);
+    background-color: var(--color-primary);
+  }
+  
+  /* === SEKCE === */
+  .section {
+    padding: var(--space-2x) 0;
+  }
+  
+  .section--divider {
+    border-top: 1px solid var(--color-divider);
+  }
+  
+  /* === PROFIL === */
+  .profile {
+    display: flex;
+    gap: var(--space-2x);
+    align-items: center;
+  }
+  
+  .profile__image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    overflow: hidden;
+  }
+  
+  .profile__name {
+    font-size: var(--font-size-heading-sub);
+    font-weight: 900;
+    color: var(--color-heading);
+  }
+  
+  .profile__role {
+    font-size: var(--font-size-small);
+    color: var(--color-primary);
+  }
+  
+  /* === KARTY === */
+  .card {
+    background-color: white;
+    padding: var(--space-1x);
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  }
+  
+  .card__icon {
+    color: var(--color-primary);
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .card__title {
+    font-weight: 900;
+    color: var(--color-heading);
+    margin-bottom: 0.5em;
+  }
+  
+  .card__text {
+    font-size: var(--font-size-small);
+    color: var(--color-text);
+  }
+  
+  /* === ZÁZNAMY / EXPERIENCE === */
+  .job {
+    display: flex;
+    gap: var(--space-1x);
+    padding: var(--space-1x) 0;
+  }
+  
+  .job__date {
+    min-width: 100px;
+    font-size: var(--font-size-small);
+  }
+  
+  .job__label {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.2em 0.6em;
+    font-size: var(--font-size-small);
+    border-radius: var(--radius);
+    margin-top: 0.2em;
+  }
+  
+  .job__content {
+    flex: 1;
+  }
+  
+  .job__title {
+    font-weight: 900;
+    color: var(--color-heading);
+    margin-bottom: 0.5em;
+  }
+  
+  .job__text {
+    font-size: var(--font-size-small);
+  }
+  
+  /* === PORTFOLIO === */
+  .portfolio {
+    display: grid;
+    gap: var(--space-1x);
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  .portfolio__item {
+    background-color: white;
+    padding: var(--space-1x);
+    border-radius: var(--radius);
+    border: 1px solid var(--color-divider);
+  }
+  
+  /* === FORMULÁŘ === */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1x);
+  }
+  
+  .form__input,
+  .form__textarea {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 0.6em;
+    font-size: 1em;
+    background-color: white;
+  }
+  
+  .form__textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form__button {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 900;
+    padding: 0.7em 1.2em;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+  
+  /* === PATIČKA === */
+  .footer {
+    background-color: var(--color-divider);
+    padding: var(--space-2x) 0;
+    text-align: center;
+    font-size: var(--font-size-small);
+    color: var(--color-text);
+  }
+  
